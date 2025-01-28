@@ -1,0 +1,28 @@
+ 2. Write a function in Python to count and display the total number of words in a text
+ file “ABC.txt
+
+def count_words_in_file():
+    try:
+        # Open the file in read mode
+        with open("ABC.txt", 'r') as file:
+            # Initialize a variable to store the word count
+            word_count = 0
+
+            # Iterate through each line in the file
+            for line in file:
+                # Split each line into words based on whitespace
+                words = line.split()
+
+                # Add the number of words in the current line to the word count
+                word_count += len(words)
+
+            # Display the total word count
+            print(f"The total number of words in 'ABC.txt' is: {word_count}")
+
+    except FileNotFoundError:
+        print("Error: The file 'ABC.txt' was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Call the function
+count_words_in_file()

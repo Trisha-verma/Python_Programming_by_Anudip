@@ -1,0 +1,23 @@
+ 1. Write a function in python to read the content from a text file "ABC.txt" line by line
+ and display the same on screen
+
+
+
+def read_file_line_by_line():
+    try:
+        # Open the file in read mode
+        with open("ABC.txt", 'r') as file:
+            print("Content of 'ABC.txt':")
+            
+            # Read the file line by line
+            for line in file:
+                # Display each line
+                print(line, end='')  # 'end' ensures no extra newline is added
+
+    except FileNotFoundError:
+        print("Error: The file 'ABC.txt' was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Call the function
+read_file_line_by_line()
