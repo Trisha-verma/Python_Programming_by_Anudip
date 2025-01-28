@@ -1,0 +1,40 @@
+ 3. Write a Python program to count Uppercase, Lowercase, special
+ character and numeric values in a given string
+ Input = “Hell0 W0rld ! 123 * # welcome to pYtHoN”
+ Output:
+ UpperCase : 5
+ LowerCase : 18
+ NumberCase : 5
+ SpecialCase : 11
+
+
+
+def count_characters(input_string):
+    # Initialize counters for each category
+    uppercase_count = 0
+    lowercase_count = 0
+    special_count = 0
+    digit_count = 0
+
+    # Iterate through each character in the string
+    for char in input_string:
+        if char.isupper():  # Check if the character is uppercase
+            uppercase_count += 1
+        elif char.islower():  # Check if the character is lowercase
+            lowercase_count += 1
+        elif char.isdigit():  # Check if the character is a digit
+            digit_count += 1
+        elif not char.isspace():  # Check if the character is a special character
+            special_count += 1
+
+    # Display the results
+    print(f"Uppercase = {uppercase_count}")
+    print(f"Lowercase = {lowercase_count}")
+    print(f"Digits = {digit_count}")
+    print(f"Special characters = {special_count}")
+
+# Input string
+input_string = "Hell0 W0rld ! 123 * # welcome to pYtHoN"
+
+# Call the function to count and display the results
+count_characters(input_string)

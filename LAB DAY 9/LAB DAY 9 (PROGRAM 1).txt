@@ -1,0 +1,31 @@
+ 1. Write a Python program to Count all letters, digits, and special
+ symbols from the given string
+ Input = “P@#yn26at^&i5ve”
+ Output: Chars = 8 Digits = 2 Symbol = 3
+
+
+def count_chars_digits_symbols(input_string):
+    # Initialize counters for characters, digits, and symbols
+    char_count = 0
+    digit_count = 0
+    symbol_count = 0
+
+    # Iterate through each character in the string
+    for char in input_string:
+        if char.isalpha():  # Check if the character is a letter
+            char_count += 1
+        elif char.isdigit():  # Check if the character is a digit
+            digit_count += 1
+        elif not char.isspace():  # Check if it's a symbol (non-space)
+            symbol_count += 1
+
+    # Display the counts
+    print(f"Chars = {char_count}")
+    print(f"Digits = {digit_count}")
+    print(f"Symbols = {symbol_count}")
+
+# Input string
+input_string = "P@#yn26at^&i5ve"
+
+# Call the function to count and display the results
+count_chars_digits_symbols(input_string)

@@ -1,0 +1,23 @@
+ 4. Write a Python Count vowels in a string
+ input= “Welcome to Python Assignment”
+ Output: Total vowels are: 8
+
+
+def count_vowels(input_string):
+    # Initialize a counter for vowels
+    vowels = "AEIOUaeiou"  # Both uppercase and lowercase vowels
+    vowel_count = 0
+
+    # Iterate through each character in the string
+    for char in input_string:
+        if char in vowels:
+            vowel_count += 1
+
+    # Display the result
+    print(f"Total vowels are: {vowel_count}")
+
+# Input string
+input_string = "Welcome to Python Assignment"
+
+# Call the function to count and display the vowel count
+count_vowels(input_string)
