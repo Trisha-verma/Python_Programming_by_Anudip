@@ -1,0 +1,28 @@
+ 3. Write a function in Python to count uppercase character in a text file “ABC.txt”
+
+
+def count_uppercase_in_file():
+    try:
+        # Open the file in read mode
+        with open("ABC.txt", 'r') as file:
+            # Initialize a counter for uppercase characters
+            uppercase_count = 0
+
+            # Read the file line by line
+            for line in file:
+                # Iterate through each character in the line
+                for char in line:
+                    # Check if the character is an uppercase letter
+                    if char.isupper():
+                        uppercase_count += 1
+
+            # Display the total count of uppercase characters
+            print(f"The total number of uppercase characters in 'ABC.txt' is: {uppercase_count}")
+
+    except FileNotFoundError:
+        print("Error: The file 'ABC.txt' was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Call the function
+count_uppercase_in_file()

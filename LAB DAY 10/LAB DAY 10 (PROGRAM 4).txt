@@ -1,0 +1,27 @@
+4. Write a function display_words() in python to read lines from a text file "story.txt",
+ and display those words, which are less than 4 characters
+
+
+def display_words():
+    try:
+        # Open the file in read mode
+        with open("story.txt", 'r') as file:
+            print("Words with less than 4 characters from 'story.txt':")
+
+            # Iterate through each line in the file
+            for line in file:
+                # Split the line into words
+                words = line.split()
+                
+                # Display words with length less than 4
+                for word in words:
+                    if len(word) < 4:
+                        print(word)
+
+    except FileNotFoundError:
+        print("Error: The file 'story.txt' was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Call the function to display words
+display_words()
