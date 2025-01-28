@@ -1,0 +1,22 @@
+2. Write a Python program that opens a file and handles a FileNotFoundError exception
+if the file does not exist
+
+
+
+def open_file():
+    try:
+        # Prompt the user for the file name
+        file_name = input("Enter the file name to open: ")
+
+        # Try to open the file in read mode
+        with open(file_name, 'r') as file:
+            content = file.read()
+            print("File content:")
+            print(content)
+
+    except FileNotFoundError:
+        # Handle the case when the file is not found
+        print(f"Error: The file '{file_name}' does not exist.")
+
+# Call the function to open the file
+open_file()
