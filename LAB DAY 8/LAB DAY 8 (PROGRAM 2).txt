@@ -1,0 +1,20 @@
+ 2. Write a Python program to remove a newline in Python
+ String = "\nBest \nDeeptech \nPython \nTraining\n"
+
+
+
+
+def remove_newline(input_string):
+    # Remove the newline characters using the replace method
+    result = input_string.replace('\n', ' ').strip()
+    
+    return result
+
+# Input string with newlines
+input_string = "\nBest \nDeeptech \nPython \nTraining\n"
+
+# Call the function to remove newlines
+output_string = remove_newline(input_string)
+
+# Display the result
+print("Output:", output_string)

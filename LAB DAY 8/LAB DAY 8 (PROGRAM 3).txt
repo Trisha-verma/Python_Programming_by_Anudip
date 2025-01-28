@@ -1,0 +1,25 @@
+ 3. Write a Python program to reverse words in a string
+ String = “Deeptech Python Training”
+
+
+
+def reverse_words(input_string):
+    # Split the input string into words
+    words = input_string.split()
+    
+    # Reverse the list of words
+    reversed_words = words[::-1]
+    
+    # Join the reversed words back into a string with spaces in between
+    reversed_string = ' '.join(reversed_words)
+    
+    return reversed_string
+
+# Input string
+input_string = "Deeptech Python Training"
+
+# Call the function to reverse the words
+output_string = reverse_words(input_string)
+
+# Display the result
+print("Reversed string:", output_string)

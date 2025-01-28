@@ -1,0 +1,30 @@
+4. Write a Python program to count and display the vowels of a given text
+ String=”Welcome to python Training"
+
+
+
+
+
+def count_vowels(input_string):
+    # Define the vowels
+    vowels = "aeiouAEIOU"
+    
+    # Initialize counters and list for storing vowels
+    vowel_count = 0
+    found_vowels = []
+
+    # Iterate through each character in the string
+    for char in input_string:
+        if char in vowels:
+            vowel_count += 1
+            found_vowels.append(char)
+
+    # Display the result
+    print(f"Total vowels: {vowel_count}")
+    print(f"Vowels in the string: {' '.join(found_vowels)}")
+
+# Input string
+input_string = "Welcome to python Training"
+
+# Call the function to count and display the vowels
+count_vowels(input_string)
