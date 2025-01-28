@@ -1,0 +1,11 @@
+2. Write a Python program to remove a newline in Python
+
+
+# Example string with a newline
+string_with_newline = "Hello, world!\n"
+
+# Remove the newline using strip()
+string_without_newline = string_with_newline.strip()
+
+print("Original string:", repr(string_with_newline))
+print("String without newline:", repr(string_without_newline))

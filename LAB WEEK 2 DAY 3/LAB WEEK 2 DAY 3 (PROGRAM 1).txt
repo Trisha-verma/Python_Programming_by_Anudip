@@ -1,0 +1,30 @@
+Write a Python program to count the occurrences of each word in a
+given sentence.
+string = “To change the overall look of your document. To change the look
+available in the gallery”
+
+
+# Input sentence
+string = "To change the overall look of your document. To change the look available in the gallery"
+
+# Preprocess the string: Convert to lowercase and remove punctuation
+import string as str_module
+sentence = string.lower().translate(str_module.maketrans("", "", str_module.punctuation))
+
+# Split the sentence into words
+words = sentence.split()
+
+# Create a dictionary to count occurrences
+word_count = {}
+
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+# Print the word count dictionary
+print("Word occurrences:")
+for word, count in word_count.items():
+    print(f"{word}: {count}")
+
